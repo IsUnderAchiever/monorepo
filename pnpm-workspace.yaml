@@ -2,3 +2,10 @@ packages:
   - 'main'
   - 'web/**'
   - 'common'
+
+allowBuilds:
+  "@parcel/watcher": true
+
+catalog:
+  vite: 8.1.5
+  vite-plus: 0.2.6
