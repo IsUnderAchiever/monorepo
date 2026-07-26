@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>classic-site — About</title>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  </head>
+  <body>
+    <!-- Navbar (same structure as index.html — traditional HTML, no templating) -->
+    <nav class="navbar navbar-expand-md sticky-top border-bottom bg-body">
+      <div class="container-xxl">
+        <a class="navbar-brand" href="/">
+          <span class="badge bg-primary rounded-pill px-3 py-2">classic-site</span>
+        </a>
+        <ul class="navbar-nav ms-auto flex-row gap-2">
+          <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
+          <li class="nav-item"><a class="nav-link active fw-semibold" href="/about.html">About</a></li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://github.com/vitejs/vite" target="_blank" rel="noreferrer">GitHub</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- About content -->
+    <main class="container-xxl py-5">
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <h1 class="display-4 fw-semibold mb-4">About This Project</h1>
+          <p class="lead text-secondary mb-5">
+            A classic multi-page website — no SPA, no router, just <code>.html</code> files linked together
+            with <code>&lt;a href&gt;</code>.
+          </p>
+
+          <hr class="my-5">
+
+          <h3 class="fw-semibold mb-3">How Navigation Works</h3>
+          <div class="card border-0 shadow-sm rounded-4 mb-4">
+            <div class="card-body p-4">
+              <p class="mb-3">There is <strong>no router library</strong>. Each page is a standalone HTML file:</p>
+              <table class="table table-bordered mb-0">
+                <thead class="table-light">
+                  <tr><th>File</th><th>URL</th><th>What it does</th></tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><code>index.html</code></td>
+                    <td><code>/</code></td>
+                    <td>Home page with counter demo</td>
+                  </tr>
+                  <tr>
+                    <td><code>about.html</code></td>
+                    <td><code>/about.html</code></td>
+                    <td>This page — project info</td>
+                  </tr>
+                </tbody>
+              </table>
+              <p class="mt-3 mb-0 text-secondary small">
+                Navigation between pages is a standard <code>&lt;a href="about.html"&gt;</code> — the browser
+                loads a full new page. Vite's dev server handles serving any <code>.html</code> file in the
+                project root automatically.
+              </p>
+            </div>
+          </div>
+
+          <h3 class="fw-semibold mb-3">Tech Choices</h3>
+          <div class="row g-3 mb-4">
+            <div class="col-sm-6">
+              <div class="card border-0 bg-body-secondary rounded-3 p-3 h-100">
+                <div class="card-body">
+                  <h5 class="card-title">🧩 jQuery</h5>
+                  <p class="card-text text-secondary small mb-0">DOM manipulation and event handling. Imported as an ES module via Vite from <code>node_modules</code>.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="card border-0 bg-body-secondary rounded-3 p-3 h-100">
+                <div class="card-body">
+                  <h5 class="card-title">🎨 Bootstrap 5</h5>
+                  <p class="card-text text-secondary small mb-0">CSS framework and JS components. Bootstrap 5 removed its jQuery dependency — we add jQuery separately.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="card border-0 bg-body-secondary rounded-3 p-3 h-100">
+                <div class="card-body">
+                  <h5 class="card-title">⚡ Vite+</h5>
+                  <p class="card-text text-secondary small mb-0">Dev server with HMR and production bundler. Replaces the need for a separate "live-server" or manual reload.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="card border-0 bg-body-secondary rounded-3 p-3 h-100">
+                <div class="card-body">
+                  <h5 class="card-title">📦 pnpm Workspace</h5>
+                  <p class="card-text text-secondary small mb-0">Monorepo package management. <code>catalog:</code> references ensure consistent dependency versions across projects.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="text-center mt-5">
+            <a href="/" class="btn btn-primary btn-lg px-4">← Back to Home</a>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="border-top py-4 text-center">
+      <small class="text-secondary">Built with Vite+ &middot; jQuery &amp; Bootstrap 5</small>
+    </footer>
+
+    <script type="module" src="/src/scripts/main.js"></script>
+  </body>
+</html>

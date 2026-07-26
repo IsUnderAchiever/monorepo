@@ -3,11 +3,78 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>classic-site</title>
+    <title>classic-site — Home</title>
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   </head>
   <body>
-    <div id="app"></div>
-    <script type="module" src="/src/main.js"></script>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-md sticky-top border-bottom bg-body">
+      <div class="container-xxl">
+        <a class="navbar-brand" href="/">
+          <span class="badge bg-primary rounded-pill px-3 py-2">classic-site</span>
+        </a>
+        <ul class="navbar-nav ms-auto flex-row gap-2">
+          <li class="nav-item"><a class="nav-link active fw-semibold" href="/">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="/about.html">About</a></li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://github.com/vitejs/vite" target="_blank" rel="noreferrer">GitHub</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Hero -->
+    <main class="container-xxl py-5">
+      <div class="text-center py-5 mb-5">
+        <span class="badge bg-info text-dark mb-3 px-3 py-1 rounded-pill">Vite + jQuery + Bootstrap</span>
+        <h1 class="display-3 fw-semibold mb-3" style="letter-spacing: -1.5px;">Build Fast.<br>Ship Faster.</h1>
+        <p class="lead text-secondary mx-auto mb-4" style="max-width: 560px;">
+          A classic multi-page website. Click the <strong>About</strong> link in the navbar to visit another page
+          — no router, just a plain <code>&lt;a href&gt;</code>.
+        </p>
+        <div class="d-flex justify-content-center gap-3">
+          <button id="counter" class="btn btn-primary btn-lg px-4" type="button">Count is 0</button>
+          <a class="btn btn-outline-secondary btn-lg" href="/about.html">About This Site →</a>
+        </div>
+      </div>
+
+      <!-- Feature cards -->
+      <div class="row g-4 pb-5">
+        <div class="col-md-4">
+          <div class="card border-0 shadow-sm h-100 rounded-4">
+            <div class="card-body p-4">
+              <div class="fs-2 mb-3">⚡</div>
+              <h5 class="card-title">Instant HMR</h5>
+              <p class="card-text text-secondary">Lightning-fast Hot Module Replacement so you can iterate at the speed of thought.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card border-0 shadow-sm h-100 rounded-4">
+            <div class="card-body p-4">
+              <div class="fs-2 mb-3">🚀</div>
+              <h5 class="card-title">Optimized Build</h5>
+              <p class="card-text text-secondary">Powered by Rolldown for production builds that are fast and lean out of the box.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card border-0 shadow-sm h-100 rounded-4">
+            <div class="card-body p-4">
+              <div class="fs-2 mb-3">📄</div>
+              <h5 class="card-title">True Multi-Page</h5>
+              <p class="card-text text-secondary">Each <code>.html</code> file is a real page. Navigation is plain <code>&lt;a href&gt;</code> — zero routing libraries.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="border-top py-4 text-center">
+      <small class="text-secondary">Built with Vite+ &middot; jQuery &amp; Bootstrap 5</small>
+    </footer>
+
+    <script type="module" src="/src/scripts/main.js"></script>
   </body>
 </html>
