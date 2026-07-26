@@ -1,14 +1,7 @@
 <script setup lang="ts">
-import { onMounted, ref } from "vue";
-import { setupCounter } from "./counter";
+import { ref } from "vue";
 
-const counterBtn = ref<HTMLButtonElement>();
-
-onMounted(() => {
-  if (counterBtn.value) {
-    setupCounter(counterBtn.value);
-  }
-});
+const counter = ref(0);
 
 const features = [
   {
@@ -76,7 +69,14 @@ const features = [
             <el-text tag="code" type="primary">src/App.vue</el-text> and see your changes instantly.
           </p>
           <el-space size="default">
-            <el-button ref="counterBtn" id="counter" type="primary" size="large" />
+            <el-button
+              id="counter"
+              type="primary"
+              size="large"
+              @click="counter++"
+            >
+              Count is {{ counter }}
+            </el-button>
             <el-button size="large" tag="a" href="https://element-plus.org" target="_blank">
               Element Plus Docs
             </el-button>
